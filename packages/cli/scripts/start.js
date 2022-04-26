@@ -173,7 +173,7 @@ module.exports = async function (argv, config, cliInfo) {
     cert: cert.cert,
   });
 
-  const local = useLocalServer({
+  const local = await useLocalServer({
     live: true,
     port: await chooseServerPort(13557),
     key: cert.key,
